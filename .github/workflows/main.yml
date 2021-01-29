@@ -1,0 +1,22 @@
+name: Playground
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: 'ubuntu-latest'    
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+    - name: Hello
+      run: echo 'Hello World'
+  
+  release:
+    needs: ['build']
+    runs-on: 'ubuntu-latest'
+    steps:
+    - name: Release
+      run: echo 'Release World'
