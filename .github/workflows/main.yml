@@ -17,7 +17,7 @@ jobs:
   release:
     needs: ['build']
     runs-on: 'ubuntu-latest'
-    if: always() && (needs.build.result == 'success' needs.build.result == 'skipped')
+    if: always() && (needs.build.result == 'success' || needs.build.result == 'skipped')
     steps:
     - name: Release
       run: echo 'Release World'
