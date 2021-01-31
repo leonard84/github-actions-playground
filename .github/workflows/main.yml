@@ -6,8 +6,8 @@ on:
     tags:
       - '*'
 
-jobs:
-  build:
+jobs:  
+  build-and-verify:
     runs-on: 'ubuntu-latest'    
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
@@ -15,9 +15,9 @@ jobs:
       run: echo 'Hello World'
   
   release:
-    needs: ['build']
+    needs: ['build-and-verify']
     runs-on: 'ubuntu-latest'
-    if: always() && (needs.build.result == 'success' || needs.build.result == 'skipped')
+    if: always() && (needs.build-and-verify.result == 'success' || needs.build-and-verify.result == 'skipped')
     steps:
     - name: Release
       run: echo 'Release World'
