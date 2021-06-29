@@ -1,5 +1,6 @@
 name: Bug Report
 description: Create a report to help us improve
+title: ""
 labels:
   - bug
 body:
@@ -15,13 +16,9 @@ body:
     id: bug-reproduce
     attributes:
       label: To Reproduce
-      description: Describe how to reproduce the bug.
-    validations:
-      required: true
+      description: |
+        Describe how to reproduce the bug.
 
-  - type: markdown
-    attributes:
-      value: |
         Please provide a [minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example).
 
         Your code examples should be…
@@ -30,6 +27,8 @@ body:
         >   …Reproducible – Test the code you're about to provide to make sure it reproduces the problem
 
         Ideally, you can provide the code directly here, alternatively, you can post a link to an example project on Github.
+    validations:
+      required: true
 
   - type: textarea
     id: bug-expected-behavior
@@ -80,19 +79,17 @@ body:
     id: bug-dependencies
     attributes:
       label: Dependencies
-      description: Which Dependencies are you using?
-    validations:
-      required: true
+      description: |
+        Which Dependencies are you using?
 
-  - type: markdown
-    attributes:
-      value: |
         Either manually list the relevant dependencies below,
         or use one of these commands to create a dependencies-report.txt and attach it
         * `./gradlew -q dependencies --configuration testRuntimeClasspath > dependencies-report.txt`
         * `mvn dependency:tree -DoutputFile=dependency-report.txt`
 
         Or, if your build is public you can use a [build scan](https://scans.gradle.com/) link.
+    validations:
+      required: true
 
   - type: textarea
     id: bug-additional-context
