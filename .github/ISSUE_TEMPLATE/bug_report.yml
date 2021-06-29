@@ -5,12 +5,12 @@ labels:
   - bug
 body:
   - type: textarea
-      id: bug-description
-      attributes:
-        label: Describe the bug
-        description: A clear and concise description of what the bug is
-      validations:
-        required: true
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is
+    validations:
+      required: true
 
   - type: markdown
     attributes:
@@ -25,45 +25,45 @@ body:
         Ideally, you can provide the code directly here, alternatively, you can post a link to an example project on Github.
 
   - type: textarea
-      id: bug-reproduce
-      attributes:
-        label: To Reproduce
-        description: Describe how to reproduce the bug.
-      validations:
-        required: true
+    id: bug-reproduce
+    attributes:
+      label: To Reproduce
+      description: Describe how to reproduce the bug.
+    validations:
+      required: true
 
   - type: textarea
-      id: bug-expected-behavior
-      attributes:
-        label: Expected behavior
-        description: A clear and concise description of what you expected to happen.
-      validations:
-        required: true
+    id: bug-expected-behavior
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
 
   - type: textarea
-      id: bug-actual-behavior
-      attributes:
-        label: Actual behavior
-        description: A clear and concise description of what happened instead.
-      validations:
-        required: true
+    id: bug-actual-behavior
+    attributes:
+      label: Actual behavior
+      description: A clear and concise description of what happened instead.
+    validations:
+      required: true
 
   - type: textarea
-      id: bug-java-version
-      attributes:
-        label: Java version
-        description: Which Java version are you using `java -version` ?
-      validations:
-        required: true
+    id: bug-java-version
+    attributes:
+      label: Java version
+      description: Which Java version are you using `java -version` ?
+    validations:
+      required: true
 
   - type: textarea
-      id: bug-buildtool-version
-      attributes:
-        label: Buildtool version
-        description: Which Buildtool version are you using `java -version` ?
-        placeholder: Paste the output of `gradlew --version` or  `mvn --version` here.
-      validations:
-        required: true
+    id: bug-buildtool-version
+    attributes:
+      label: Buildtool version
+      description: Which Buildtool version are you using `java -version` ?
+      placeholder: Paste the output of `gradlew --version` or  `mvn --version` here.
+    validations:
+      required: true
 
   - type: dropdown
     id: bug-os
@@ -95,7 +95,7 @@ body:
         description: Which Dependencies are you using?
       validations:
         required: true
-        
+
   - type: textarea
       id: bug-additional-context
       attributes:
