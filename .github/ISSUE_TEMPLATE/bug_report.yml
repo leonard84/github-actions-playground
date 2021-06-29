@@ -89,15 +89,15 @@ body:
         Or, if your build is public you can use a [build scan](https://scans.gradle.com/) link.
 
   - type: textarea
-      id: bug-dependencies
-      attributes:
-        label: Dependencies
-        description: Which Dependencies are you using?
-      validations:
-        required: true
+    id: bug-dependencies
+    attributes:
+      label: Dependencies
+      description: Which Dependencies are you using?
+    validations:
+      required: true
 
   - type: textarea
-      id: bug-additional-context
-      attributes:
-        label: Additional context
-        description: Anything else that did not fit in the other categories.
+    id: bug-additional-context
+    attributes:
+      label: Additional context
+      description: Anything else that did not fit in the other categories.
