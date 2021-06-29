@@ -11,6 +11,14 @@ body:
     validations:
       required: true
 
+  - type: textarea
+    id: bug-reproduce
+    attributes:
+      label: To Reproduce
+      description: Describe how to reproduce the bug.
+    validations:
+      required: true
+
   - type: markdown
     attributes:
       value: |
@@ -22,14 +30,6 @@ body:
         >   …Reproducible – Test the code you're about to provide to make sure it reproduces the problem
 
         Ideally, you can provide the code directly here, alternatively, you can post a link to an example project on Github.
-
-  - type: textarea
-    id: bug-reproduce
-    attributes:
-      label: To Reproduce
-      description: Describe how to reproduce the bug.
-    validations:
-      required: true
 
   - type: textarea
     id: bug-expected-behavior
@@ -76,6 +76,13 @@ body:
     validations:
       required: true
 
+  - type: textarea
+    id: bug-dependencies
+    attributes:
+      label: Dependencies
+      description: Which Dependencies are you using?
+    validations:
+      required: true
 
   - type: markdown
     attributes:
@@ -86,14 +93,6 @@ body:
         * `mvn dependency:tree -DoutputFile=dependency-report.txt`
 
         Or, if your build is public you can use a [build scan](https://scans.gradle.com/) link.
-
-  - type: textarea
-    id: bug-dependencies
-    attributes:
-      label: Dependencies
-      description: Which Dependencies are you using?
-    validations:
-      required: true
 
   - type: textarea
     id: bug-additional-context
