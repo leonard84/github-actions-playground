@@ -1,0 +1,10 @@
+on:
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Sleep for 30 seconds
+      run: sleep 30s
+      shell: bash
